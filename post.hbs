@@ -1,0 +1,14 @@
+{{!< default}}
+
+{{#post}}
+<article>
+    <header>
+        <h1>{{title}}</h1>
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+    </header>
+
+    <section class="content">
+        {{content}} {{! This pulls in your Markdown/HTML from the editor }}
+    </section>
+</article>
+{{/post}}

@@ -1,0 +1,8 @@
+{
+	"name": "nerd-blog",
+	"description": "Minimalist barebones theme for justaregularnerd.online",
+	"version": "0.0.1",
+	"engines": {
+		"ghost": ">=6.0.0"
+	}
+}
