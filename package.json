@@ -2,7 +2,9 @@
 	"name": "nerd-blog",
 	"description": "Minimalist barebones theme for justaregularnerd.online",
 	"version": "0.0.1",
-	"author.email": "me@justaregularnerd.online",
+	"author": {
+		"email": "me@justaregularnerd.online"
+	},
 	"engines": {
 		"ghost": ">=6.0.0"
 	}
