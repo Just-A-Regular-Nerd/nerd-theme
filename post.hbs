@@ -1,14 +1,25 @@
 {{!< default}}
 
 {{#post}}
-<article>
-    <header>
-        <h1>{{title}}</h1>
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-    </header>
-
-    <section class="content">
-        {{content}} {{! This pulls in your Markdown/HTML from the editor }}
-    </section>
-</article>
+<h1>{{title}}</h1>
+<h2><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h2>
+<p>{{content}}</p>
 {{/post}}
+
+{{!< default}}
+
+<div class="small">
+	<nav>
+		<div>latest posts...</div>
+		        {{#foreach posts}}
+			    <a href={{url}}>{{title}}</a>
+			{{/foreach}}
+	</nav>
+</div>
+
+<div class="large">
+	{{#post}}
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+	{{/post}}
+</div>

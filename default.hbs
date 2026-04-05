@@ -8,18 +8,15 @@
     {{ghost_head}} {{! Outputs SEO meta tags and scripts }}
 </head>
 <body class="{{body_class}}">
+	<div class="container">
+		<header>
+			<span>{{@site.title}}</span>
+		</header>
 
-    <header>
-        <h1><a href="{{@site.url}}">{{@site.title}}</a></h1>
-        <p>{{@site.description}}</p>
-    </header>
-
-    <main>
-        {{{body}}} {{! This is where index.hbs or post.hbs is injected }}
-    </main>
+		{{{body}}}
 
     <footer>
-        &copy; {{date format="YYYY"}} {{@site.title}} | <a href="{{@site.url}}/rss/">RSS Feed</a>
+        <span>&copy; {{date format="YYYY"}} {{@site.title}} | <a href="{{@site.url}}/rss/">RSS Feed</a> | cyanobacteria.css by <a href="https://ribo.zone/free/layouts/">ribo.zone</a></span>
     </footer>
 
     {{ghost_foot}} {{! Outputs required scripts }}
