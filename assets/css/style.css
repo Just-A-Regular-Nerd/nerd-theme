@@ -180,7 +180,7 @@ pre { overflow-x: auto; }
 
 
 a:hover, a:focus {
-	font-style: italic;
+	text-decoration: underline;
 }
 a:visited {
 	color: var(--accent);
