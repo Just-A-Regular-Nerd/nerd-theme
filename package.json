@@ -1,7 +1,7 @@
 {
 	"name": "nerd-blog",
-	"description": "Minimalist barebones theme for justaregularnerd.online",
-	"version": "0.0.1",
+	"description": "Adaptation of cyanobacteria for Ghost",
+	"version": "0.1.0",
 	"author": {
 		"email": "me@justaregularnerd.online"
 	},
