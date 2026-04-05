@@ -1,14 +1,10 @@
 {{!< default}}
 
 <div class="small">
+	
 	<nav>
 		<div>site navigation</div>
-		{{#foreach pages}}
-			<a href={{url}}>{{title}}</a>
-		{{else}}
-			<p>No further posts found</p>
-			<a href={{@site.url}}>Index</a>
-		{{/foreach}}
+		{{navigation}}
 	</nav>
 	<nav>
 		<div>latest posts...</div>
@@ -27,15 +23,14 @@
     if (window.aboutPageData) {
       const page = window.aboutPageData;
       const aboutEl = document.getElementById('about-post');
-      const dateStr = new Date(page.published_at).toLocaleDateString('en-US', { 
+      const dateStr = new Date(page.updated_at).toLocaleDateString('en-US', { 
         year: 'numeric', 
         month: 'short', 
         day: 'numeric' 
       });
       
       aboutEl.innerHTML = `
-        <h1>${page.title}</h1>
-        <time datetime="${page.published_at}">${dateStr}</time>
+        <h3>Last updated <time datetime="${page.published_at}">${dateStr}</time></h3>
         <div class="post-content">${page.html}</div>
       `;
     }
