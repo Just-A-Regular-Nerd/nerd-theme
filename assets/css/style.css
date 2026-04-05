@@ -1,4 +1,5 @@
-/* temporarily taken from cyanobacteria.css */
+/* adapted from cyanobacteria.css */
+/* find original at https://ribo.zone/free/layouts/cyanobacteria/preview# */
 
 :root {
 	--text: darkslategrey;
@@ -45,7 +46,7 @@ body {
 }
 
 .container {
-	max-width: 55rem;
+	max-width: 75rem;
 	margin: 5vw auto 12px auto;
 	border: 6px ridge var(--border);
 	outline: 3px solid var(--gradientTop);
@@ -95,7 +96,8 @@ nav {
 	border: 2px ridge var(--border);
 	border-radius: 5px;
 	padding: 5px;
-	backgrond: linear-gradient(var(--gradientTop),var(--gradientBottom));
+	background: linear-gradient(var(--gradientTop),var(--gradientBottom));
+	margin-bottom: 1vw;
 }
 
 nav div {
@@ -139,9 +141,10 @@ section {
 
 
 footer {
-	text-align: center;
-	margin-bottom: 5vw;
+	text-align: left;
+	margin-bottom: 1vw;
 	font-size: 0.8rem;
+	flex: 1 1 100%;
 }
 footer a {
 	text-decoration: none;
@@ -175,7 +178,10 @@ h4 {
 }
 
 /* prevents overflow on smaller screens */
-img { max-width: 100%; }
+img {
+	max-width: 100%;
+	height: auto;
+}
 pre { overflow-x: auto; }
 
 
@@ -187,7 +193,7 @@ a:visited {
 }
 
 article {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 /* Wide images */

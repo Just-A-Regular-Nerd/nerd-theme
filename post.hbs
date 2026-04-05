@@ -1,17 +1,19 @@
 {{!< default}}
 
-<div class="small">
-	<nav>
-		<div>latest posts...</div>
-		        {{#foreach posts}}
-			    <a href={{url}}>{{title}}</a>
-			{{/foreach}}
-	</nav>
-</div>
-
-<div class="large">
+<div class="full">
 	{{#post}}
 			<h1>{{title}}</h1>
+			<h2><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h2>
 			<p>{{content}}</p>
 	{{/post}}
+	
+	<nav class="post-navigation">
+		{{#prev_post}}
+			<a href="{{url}}" class="prev-post">Prev: {{title}}</a>
+		{{/prev_post}}
+		
+		{{#next_post}}
+			<a href="{{url}}" class="next-post">Next: {{title}}</a>
+		{{/next_post}}
+	</nav>
 </div>

@@ -2,36 +2,50 @@
 
 <div class="small">
 	<nav>
+		<div>site navigation</div>
+		{{#foreach pages}}
+			<a href={{url}}>{{title}}</a>
+		{{else}}
+			<p>No further posts found</p>
+			<a href={{@site.url}}>Index</a>
+		{{/foreach}}
+	</nav>
+	<nav>
 		<div>latest posts...</div>
-		        {{#foreach posts limit="5"}}
-			    <a href={{url}}>{{title}}</a>
-			{{/foreach}}
+		{{#foreach posts limit="5"}}
+			<a href={{url}}>{{title}}</a>
+		{{/foreach}}
 	</nav>
 </div>
 
+<section class="half">
+	<article class="about-post" id="about-post"></article>
+</section>
+
 <script>
-	function renderAboutPost() {
-		if (window.aboutPageData) {
-			const page = window.aboutPageData;
-			const aboutEl = document.getElementById('about-post');
-			const dateStr = new Date(page.published_at).toLocaleDateString('en-US', {
-				year: 'numeric',
-				month: 'short',
-				day: 'numeric'
-			});
-			
-			aboutEl.innerHTML = `
-				<h1>${page.title}</h1>
-				<time datetime="${page.published_at}">${dateStr}</time>
-				<div class="post-content">${page.html}</div>
-			`;
-		}
-	}
-	
-	// Wait for the about page data to load, then render
-	if (window.aboutPageData) {
-		renderAboutPost();
-	} else {
-		setTimeout(renderAboutPost, 500);
-	}
+  function renderAboutPost() {
+    if (window.aboutPageData) {
+      const page = window.aboutPageData;
+      const aboutEl = document.getElementById('about-post');
+      const dateStr = new Date(page.published_at).toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+      
+      aboutEl.innerHTML = `
+        <h1>${page.title}</h1>
+        <time datetime="${page.published_at}">${dateStr}</time>
+        <div class="post-content">${page.html}</div>
+      `;
+    }
+  }
+  
+  // Wait for the about page data to load, then render
+  if (window.aboutPageData) {
+    renderAboutPost();
+  } else {
+    // If not loaded yet, wait a bit and try again
+    setTimeout(renderAboutPost, 500);
+  }
 </script>
