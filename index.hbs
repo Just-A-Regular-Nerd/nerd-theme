@@ -10,10 +10,8 @@
 </div>
 
 <div class="large">
-	{{#get "posts" limit="1" filter="slug:about"}}
-		{{#foreach posts}}
-			<h1>{{title}}</h1>
-			<p>{{content}}</p>
-		{{/foreach}}
-	{{/get}}
+	{{#foreach pages}}
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+	{{/foreach}}
 </div>
