@@ -1,11 +1,19 @@
-{{!< default}} {{! Tells Ghost to use default.hbs as the layout }}
+{{!< default}}
 
-{{#foreach posts}}
-    <article>
-        <h2><a href="{{url}}">{{title}}</a></h2>
-        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-        <p>{{excerpt words="30"}}...</p>
-    </article>
-{{/foreach}}
+<div class="small">
+	<nav>
+		<div>latest posts...</div>
+		        {{#foreach posts}}
+			    <a href={{url}}>{{title}}</a>
+			{{/foreach}}
+	</nav>
+</div>
 
-{{pagination}} {{! Adds Previous/Next links if you have many posts }}
+<div class="large">
+	{{#get "posts" limit="1" filter="slug:about"}}
+		{{#foreach posts}}
+			<h1>{{title}}</h1>
+			<p>{{content}}</p>
+		{{/foreach}}
+	{{/get}}
+</div>
