@@ -1,7 +1,9 @@
-# Minimalist Ghost theme
+# cyanobacteria.css port to Ghost
 
-This theme is intended to be classic, easy to read on older devices, but still look good otherwise.
+This theme is a (pretty rough) port of cyanobacteria.css from ribo.zone to be compatible with Ghost in as many dynamic ways as I use.
 
-Currently this theme is a serious work in progress, and is the first Ghost theme I've worked on.
+This theme is used for my blog on [justaregularnerd.online](https://justaregularnerd.online).
 
-Feel free to use or modify it for your own weblog, but be warned that this will either see major changes without notice, or not change for a long time (if it ain't broke, don't fix it?)
+At the current stage of this theme, I would not recommend using it for your own blog without expecting issues. It should work for the most part in theory, but know that I'm far from a professional front-end web developer and the immediate goals are to make it "just work" with my website.
+
+With all that being said, I do encourage you to report issues should you try this theme out, or even make contributions to improve the theme.
