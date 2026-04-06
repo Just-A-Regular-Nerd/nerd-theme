@@ -3,14 +3,16 @@
 <div class="full">
 	{{#post}}
 			<h1>{{title}}</h1>
-			<figure class="kg-card kg-image-card kg-card-hascaption">
-				<img class="kg-image" src={{feature_image}} alt={{feature_image_alt}}>
-				{{#if feature_image_caption}}
-					<figcaption>
-						<span style="white-space: pre-wrap;">{{feature_image_caption}}</span>
-					</figcaption>
-				{{/if}}
-			</figure>
+			{{#if feature_image}} <!-- Show feature image if it exists -->
+				<figure class="kg-card kg-image-card kg-card-hascaption">
+					<img class="kg-image" src={{feature_image}} alt={{feature_image_alt}}>
+					{{#if feature_image_caption}} <!-- Show feature image caption if it exists -->
+						<figcaption>
+							<span style="white-space: pre-wrap;">{{feature_image_caption}}</span>
+						</figcaption>
+					{{/if}}
+				</figure>
+			{{/if}
 			<h3>Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h3>
 			<p>{{content}}</p>
 	{{/post}}
