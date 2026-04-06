@@ -47,7 +47,7 @@ body {
 
 .container {
 	max-width: 75rem;
-	margin: 5vw auto 12px auto;
+	margin: 1vw auto 12px auto;
 	border: 6px ridge var(--border);
 	outline: 3px solid var(--gradientTop);
 	outline-offset: 4px;
@@ -319,3 +319,59 @@ Retrieved 2026-04-06, License - CC BY-SA 4.0
     background: url('/assets/images/yt_play_icon.png') no-repeat;
     cursor: pointer;
   }
+
+/* Lightbox overlay */
+.gg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  overflow: hidden;
+}
+
+/* Container that allows horizontal scroll for tall/wide images */
+.gg-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto; /* enables scrolling when image is wider than viewport */
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem; /* breathing room on small screens */
+  box-sizing: border-box;
+}
+
+/* The image inside overlay */
+.gg-overlay img {
+  display: block;
+  max-width: none; /* we'll control dimensions per class */
+  max-height: 100vh;
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Normal images: scale up to fit viewport by width (but respect aspect) */
+.gg-overlay img.gg-fit-width {
+  max-width: 100vw;
+  height: auto;
+  max-height: 100vh;
+}
+
+/* Full-width (panoramic) images: make image height = viewport height,
+   allow horizontal scrolling of container */
+.gg-overlay img.gg-fit-height {
+  height: 100vh;
+  width: auto;
+}
+
+/* Prevent overlay showing scrollbars except when needed */
+.gg-container::-webkit-scrollbar { height: 12px; }

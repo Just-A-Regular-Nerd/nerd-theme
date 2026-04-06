@@ -1,6 +1,8 @@
 <nav>
 		<div>site navigation</div>
-		{{#foreach navigation}}
-			<a href="{{url absolute="true"}}">{{label}}</a>
-		{{/foreach}}
+		{{#get "pages"}}
+			{{#foreach pages}}
+				<a href={{url}}>{{title}}</a>
+			{{/foreach}}
+		{{/get}}
 </nav>

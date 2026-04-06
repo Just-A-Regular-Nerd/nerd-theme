@@ -2,15 +2,16 @@
 
 <div class="small">
 	
+	{{> "navigation"}}
 	<nav>
-		<div>site navigation</div>
-		{{navigation}}
-	</nav>
-	<nav>
-		<div>latest posts...</div>
-		{{#foreach posts limit="5"}}
-			<a href={{url}}>{{title}}</a>
-		{{/foreach}}
+		<div>all posts</div>
+		  {{#foreach posts limit="all"}}
+			<article class="post-archive-item">
+			  <h2><a href="{{url}}">{{title}}</a></h2>
+			  <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+			  <p>{{excerpt}}</p>
+			</article>
+		  {{/foreach}}
 	</nav>
 </div>
 
@@ -41,6 +42,6 @@
     renderAboutPost();
   } else {
     // If not loaded yet, wait a bit and try again
-    setTimeout(renderAboutPost, 500);
+    setTimeout(renderAboutPost, 750);
   }
 </script>

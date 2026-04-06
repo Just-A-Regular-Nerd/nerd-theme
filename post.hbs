@@ -3,6 +3,7 @@
 <div class="full">
 	{{#post}}
 			<h1>{{title}}</h1>
+			<h2>Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h2>
 			{{#if feature_image}} <!-- Show feature image if it exists -->
 				<figure class="kg-card kg-image-card kg-card-hascaption">
 					<img class="kg-image" src={{feature_image}} alt={{feature_image_alt}}>
@@ -13,7 +14,7 @@
 					{{/if}}
 				</figure>
 			{{/if}}
-			<h3>Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h3>
+			<br />
 			<p>{{content}}</p>
 	{{/post}}
 	
