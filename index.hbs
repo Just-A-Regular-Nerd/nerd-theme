@@ -1,13 +1,34 @@
 {{!< default}}
 
 <div class="small">
-	
+	<!-- site map -->
 	{{> "navigation"}}
+	<!-- featured post -->
+	{{#get "posts" filter="featured:true" limit="all"}}
+		<nav>
+			<h3>Featured posts</h3>
+			{{#if posts}}
+				{{#foreach posts}}
+					<p>{{title}}</p>
+					{{#if feature_image}}
+						<a href="{{url}}">
+							<img class="kg-image" src={{feature_image}} alt={{feature_image_alt}}>
+						</a>
+					{{/if}}
+					<p>{{excerpt}}</p>
+					<a href="{{url}}">Read more...</a>
+				{{/foreach}}
+			{{else}}
+				<p>There are no featured posts at the moment.</p>
+			{{/if}}
+		</nav>
+	{{/get}}
+	<!-- post list -->
 	<nav>
 		<div>all posts</div>
 		  {{#foreach posts limit="all"}}
 			<article class="post-archive-item">
-			  <a href="{{url}}">{{title}}</a>
+			  <a class="navlink" href="{{url}}">{{title}}</a>
 			  <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
 			  <p>{{excerpt}}</p>
 			</article>

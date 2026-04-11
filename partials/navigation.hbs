@@ -2,41 +2,41 @@
 		<div>site navigation</div>
 		{{#get "pages"}}
 			{{#foreach pages}}
-				<a href={{url}}>{{title}}</a>
+				<a class="navlink" href={{url}}>{{title}}</a>
 			{{/foreach}}
 		{{/get}}
 		{{#get "authors"}}
 			{{#foreach authors}}
 				<p>Details for {{name}}</p>
 				{{#if website}}
-					<a href=//{{website}}>Website</a>
+					<a class="navlink" href=//{{website}}>Website</a>
 				{{/if}}
 				{{#if twitter}}
-					<a href="{{social_url type="twitter"}}">Twitter</a>
+					<a class="navlink" href="{{social_url type="twitter"}}">Twitter</a>
 				{{/if}}
 				{{#if facebook}}
-					<a href="{{social_url type="facebook"}}">Facebook</a>
+					<a class="navlink" href="{{social_url type="facebook"}}">Facebook</a>
 				{{/if}}
 				{{#if linkedin}}
-					<a href="{{social_url type="linkedin"}}">LinkedIn</a>
+					<a class="navlink" href="{{social_url type="linkedin"}}">LinkedIn</a>
 				{{/if}}
 				{{#if threads}}
-					<a href="{{social_url type="threads"}}">Threads</a>
+					<a class="navlink" href="{{social_url type="threads"}}">Threads</a>
 				{{/if}}
 				{{#if bluesky}}
-					<a href="{{social_url type="bluesky"}}">Bluesky</a>
+					<a class="navlink" href="{{social_url type="bluesky"}}">Bluesky</a>
 				{{/if}}
 				{{#if mastodon}}
-					<a href="{{social_url type="mastodon"}}">Fediverse</a>
+					<a class="navlink" href="{{social_url type="mastodon"}}">Fediverse</a>
 				{{/if}}
 				{{#if tiktok}}
-					<a href="{{social_url type="tiktok"}}">TikTok</a>
+					<a class="navlink" href="{{social_url type="tiktok"}}">TikTok</a>
 				{{/if}}
 				{{#if youtube}}
-					<a href="{{social_url type="youtube"}}">YouTube</a>
+					<a class="navlink" href="{{social_url type="youtube"}}">YouTube</a>
 				{{/if}}
 				{{#if instagram}}
-					<a href="{{social_url type="instagram"}}">Instagram</a>
+					<a class="navlink" href="{{social_url type="instagram"}}">Instagram</a>
 				{{/if}}
 			{{/foreach}}
 		{{/get}}

@@ -106,7 +106,7 @@ nav div {
 	margin: 5px 5px 10px 5px;
 }
 
-nav a, nav li {
+.navlink {
 	display: block;
 	margin: 5px;
 	background: linear-gradient(to right, var(--bg),var(--gradientBottom));
@@ -115,14 +115,15 @@ nav a, nav li {
 	text-decoration: none;
 }
 
-nav a:link, nav a:visited {
+/* temporarily disabled
+.navlink nav a:link, nav a:visited {
 	color: var(--text);
 }
 
-nav a:hover, nav a:focus {
+.navlink nav a:hover, nav a:focus {
 	background: linear-gradient(to right, var(--bg), var(--gradientBottom), var(--gradientTop));
 }
-
+*/
 /* button styling */
 div.small > img {
 	display: block;
