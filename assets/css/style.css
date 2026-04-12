@@ -115,15 +115,15 @@ nav div {
 	text-decoration: none;
 }
 
-/* temporarily disabled
-.navlink nav a:link, nav a:visited {
+
+nav a:link, nav a:visited {
 	color: var(--text);
 }
 
-.navlink nav a:hover, nav a:focus {
+nav a:hover, nav a:focus {
 	background: linear-gradient(to right, var(--bg), var(--gradientBottom), var(--gradientTop));
 }
-*/
+
 /* button styling */
 div.small > img {
 	display: block;
@@ -218,14 +218,6 @@ article {
 	width: 100%;
 	margin: 2em auto;
 }
-
-/* Center standard images */
-/*.kg-image-card {			old code
-	margin: 0 0 1.5em 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}*/
 
 /* Center standard images */
 .kg-image-card {
