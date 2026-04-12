@@ -16,15 +16,15 @@
 			{{/if}}
 			<br />
 			<p>{{content}}</p>
+
+		<nav class="post-navigation">
+			{{#prev_post}}
+				<a href="{{url}}" class="prev-post">Prev: {{title}}</a>
+			{{/prev_post}}
+			
+			{{#next_post}}
+				<a href="{{url}}" class="next-post">Next: {{title}}</a>
+			{{/next_post}}
+		</nav>
 	{{/post}}
-	
-	<nav class="post-navigation">
-		{{#prev_post}}
-			<a href="{{url}}" class="prev-post">Prev: {{title}}</a>
-		{{/prev_post}}
-		
-		{{#next_post}}
-			<a href="{{url}}" class="next-post">Next: {{title}}</a>
-		{{/next_post}}
-	</nav>
 </div>
