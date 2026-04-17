@@ -1,6 +1,8 @@
+/* This should be injected rather than made publicly available
+
 window.aboutPageData = null;
 
-fetch('https://justaregularnerd.online/ghost/api/content/pages/?key=977eb6425300982afd369c6339&filter=slug:about&limit=1')
+fetch('https://justaregularnerd.online/ghost/api/content/pages/?key=enteryourcontentkeyhere&filter=slug:about&limit=1')
   .then(res => res.json())
   .then(data => {
     if (data.pages && data.pages.length > 0) {
@@ -8,3 +10,4 @@ fetch('https://justaregularnerd.online/ghost/api/content/pages/?key=977eb6425300
     }
   })
   .catch(err => console.error('Error fetching about page:', err));
+*/
