@@ -7,5 +7,13 @@
 	},
 	"engines": {
 		"ghost": ">=6.0.0"
+	},
+	"config": {
+		"image_sizes": {
+			"thumbnail": {"width": 300 },
+			"small": {"width": 600 },
+			"medium": {"width": 1000 },
+			"large": {"width": 2000 }
+		}
 	}
 }
