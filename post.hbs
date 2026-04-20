@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-	<div class="full">
+	<div class="full" role="main">
 		<h1>{{title}}</h1>
 		<h2>Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></h2>
 		{{#if feature_image}} <!-- Show feature image if it exists -->
@@ -28,11 +28,11 @@
 			{{/if}}
 			
 			{{#next_post}}
-				<p><b>Next: </b><a href="{{url}}">{{title}}</a></p>
+				<p><b>Next: </b><a href="{{url}}" aria-label="Read next article {{title}}">{{title}}</a></p>
 			{{/next_post}}
 
 			{{#prev_post}}
-				<p><b>Previous: </b><a href="{{url}}">{{title}}</a></p>
+				<p><b>Previous: </b><a href="{{url}}" aria-label="Or read previous article on {{title}}">{{title}}</a></p>
 			{{/prev_post}}
 		</nav>
 	</div>

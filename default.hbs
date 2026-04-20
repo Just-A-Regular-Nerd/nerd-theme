@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <script src="/assets/js/expandable-images.js"></script>
-    <script src="/assets/js/get-about.js"></script>
     <script src="/assets/js/yt-embed-fix.js"></script>
     {{ghost_head}} {{! Outputs SEO meta tags and scripts }}
 </head>
 <body class="{{body_class}}">
 	<div class="container">
-		<header>
+		<header role="banner">
 			<a href="{{@site.url}}"><span>{{@site.title}}</span></a>
 		</header>
 
 		{{{body}}}
 
-    <footer>
+    <footer role="contentinfo">
         <span>&copy; {{date format="YYYY"}} {{@site.title}} | <a href="https://github.com/Just-A-Regular-Nerd/nerd-theme">site theme</a>, adapted from <a href="https://ribo.zone/free/layouts/">cyanobacteria.css</a></span>
     </footer>
 
